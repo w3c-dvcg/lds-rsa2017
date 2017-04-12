@@ -8,8 +8,7 @@
       For the three scripts below, if your spec resides on dev.w3 you can check them
       out in the same tree and use relative links so that they'll work offline,
      -->
-    <!--script src='//www.w3.org/Tools/respec/respec-w3c-common' class='remove'></script-->
-    <script src='//sites.local/respec/builds/respec-w3c-common.js' class='remove'></script>
+    <script src='//www.w3.org/Tools/respec/respec-w3c-common' class='remove'></script>
     <script type="text/javascript" class="remove">
       var respecConfig = {
         // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
@@ -61,7 +60,7 @@
         wg:           "W3C Digital Verification Community Group",
 
         // URI of the public WG page
-        wgURI:        "http://www.w3.org/community/digital-verification/",
+        wgURI:        "https://www.w3.org/community/digital-verification/",
 
         // name (with the @w3c.org) of the public mailing to which comments are due
         wgPublicList: "public-digital-verification",
@@ -208,12 +207,12 @@ the following algorithms:
           </tr>
           <tr>
             <td>digestAlgorithm</td>
-            <td>https://registry.ietf.org/ietf-digest-algorithms#SHA256</td>
+            <td>https://www.ietf.org/assignments/jwa-parameters#SHA256</td>
             <td>[[RFC6234]]</td>
           </tr>
           <tr>
             <td>signatureAlgorithm</td>
-            <td>https://registry.ietf.org/ietf-jose-jws-algorithms#RS256</td>
+            <td>https://www.ietf.org/assignments/jwa-parameters#RS256</td>
             <td>[[RFC7515]]</td>
           </tr>
         </tbody>
@@ -243,7 +242,7 @@ and </var><var>options</var> as inputs and produces a
           <li>
 Take <var>tbs</var>, which is the data to be signed, as input and generate
 a JOSE Web Signature structure where the headers are:
-<code>{"alg":"HS256","b64":false,"crit":["b64"]}</code> and the
+<code>{"alg":"RS256","b64":false,"crit":["b64"]}</code> and the
 payload is a URL-safe Base64 encoding of <var>tbs</var>.
           </li>
           <li>
